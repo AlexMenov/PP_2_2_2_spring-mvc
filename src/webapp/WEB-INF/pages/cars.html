@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cars Models</title>
+</head>
+<body style="display: flex; flex-direction: column; justify-content: center; align-items: center">
+<h2 style="font-size: 32px; color: darkcyan; margin-bottom: 50px">
+    Cars models you can buy:
+</h2>
+<table style="font-size: 18px; color: dodgerblue; width: 350px; text-align: center">
+    <thead>
+    <tr style="background: burlywood">
+        <td>Model</td>
+        <td>Year</td>
+        <td>Photo</td>
+    </tr>
+    </thead>
+    <tbody>
+    <th:block th:each="car : ${cars}">
+        <tr>
+            <td th:text="${car.carModel()}"></td>
+            <td th:text="${car.carYearProduction()}"></td>
+            <td th:text="${car.carPhoto()}"></td>
+        </tr>
+    </th:block>
+    </tbody>
+</table>
+
+</body>
+</html>
